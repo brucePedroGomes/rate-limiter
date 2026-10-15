@@ -1,0 +1,5 @@
+[
+  { "id": 1, "title": "Reply to the client email", "done": true },
+  { "id": 2, "title": "Review the pull request", "done": false },
+  { "id": 3, "title": "Prepare the standup notes", "done": false }
+]
