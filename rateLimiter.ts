@@ -27,10 +27,7 @@ export class RateLimit {
     const oldestLeavesAt = recentTimes[0] + this.options.windowMs;
 
     res.setHeader("X-RateLimit-Limit", this.options.limit);
-    res.setHeader(
-      "X-RateLimit-Remaining",
-      this.options.limit - recentTimes.length,
-    );
+    res.setHeader("X-RateLimit-Remaining", this.options.limit - recentTimes.length);
     res.setHeader("X-RateLimit-Reset", Math.ceil(oldestLeavesAt / 1000));
 
     if (isFull) {
